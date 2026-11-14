@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Oliver - Digital Artist Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 400px;
+            background-color: #4a5f4a;
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+
+        .header {
+            background-color: #3d4f3d;
+            padding: 25px 20px;
+            border-bottom: 2px solid #2a3a2a;
+        }
+
+        .name {
+            font-size: 48px;
+            line-height: 0.9;
+            letter-spacing: -1px;
+            margin-bottom: 18px;
+            font-weight: normal;
+        }
+
+        .roles {
+            list-style: none;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .roles li {
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .roles li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            font-size: 14px;
+        }
+
+        .intro {
+            background-color: #8b9d7a;
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .nav {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav a {
+            padding: 18px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .nav a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+            gap: 25px;
+            background-color: white;
+        }
+
+        .gallery-item {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+
+            .name {
+                font-size: 36px;
+            }
+
+            .roles {
+                font-size: 14px;
+            }
+
+            .nav a {
+                font-size: 18px;
+                padding: 15px 20px;
+            }
+
+            .gallery {
+                flex-direction: column;
+                overflow-y: auto;
+            }
+
+            .gallery-item {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="header">
+                <h1 class="name">JUSTIN<br>OLIVER</h1>
+                <ul class="roles">
+                    <li>DIGITAL ARTIST</li>
+                    <li>ILLUSTRATOR</li>
+                    <li>GRAPHIC DESIGN</li>
+                </ul>
+                <p style="font-size: 14px; line-height: 1.4; margin-top: 18px;">Hi! I'm Oliver, an aspiring Filipino artist and CS student currently exploring different styles and techniques.</p>
+            </div>
+            <nav class="nav">
+                <a href="gallery.html">gallery</a>
+                <a href="about.html">about</a>
+                <a href="services.html">services</a>
+                <a href="contact.html">contact</a>
+            </nav>
+        </aside>
+        <main class="gallery">
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/dilaclear.png" alt="Portrait 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/minaclear.png" alt="Portrait 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/tzuyuclear.png" alt="Portrait 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/jisooclearhalf.png" alt="Portrait 4">
+            </div>
+        </main>
+    </div>
+</body>
+</html>

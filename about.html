@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Justin Oliver</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 100px;
+            background-color: #4a5f4a;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            padding: 25px 10px;
+            color: white;
+            font-size: 22px;
+            line-height: 1.1;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .nav a {
+            padding: 20px 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            flex: 1;
+            background-color: #8b9d7a;
+            padding: 50px 60px;
+            overflow-y: auto;
+            color: white;
+        }
+
+        .content-title {
+            font-size: 80px;
+            line-height: 0.9;
+            letter-spacing: -1px;
+            margin-bottom: 40px;
+            font-weight: normal;
+        }
+
+        .content p {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .gallery-preview {
+            width: 700px;
+            display: flex;
+            overflow: hidden;
+            gap: 25px;
+        }
+
+        .preview-column {
+            flex: 1;
+            height: 100vh;
+        }
+
+        .preview-column img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (max-width: 1024px) {
+            .gallery-preview {
+                width: 280px;
+            }
+
+            .content {
+                padding: 35px 40px;
+            }
+
+            .content-title {
+                font-size: 60px;
+            }
+
+            .content p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+
+            .logo {
+                font-size: 18px;
+                padding: 15px;
+            }
+
+            .nav {
+                flex-direction: row;
+                overflow-x: auto;
+            }
+
+            .nav a {
+                font-size: 16px;
+                padding: 15px 25px;
+                white-space: nowrap;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            .content-title {
+                font-size: 40px;
+                margin-bottom: 25px;
+            }
+
+            .content p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .gallery-preview {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">JUSTIN<br>OLIVER</div>
+            <nav class="nav">
+                <a href="index.html">home</a>
+                <a href="gallery.html">gallery</a>
+                <a href="about.html" class="active">about</a>
+                <a href="services.html">services</a>
+                <a href="contact.html">contact</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <h1 class="content-title">JUSTIN<br>OLIVER</h1>
+            
+            <p>Hi! I'm a Filipino Computer Science student who loves creating digital art using just my phone and my fingers. I mostly focus on portraits, where I try to capture emotion, character, and subtle details through simple yet expressive strokes.</p>
+            
+            <p>This online portfolio is actually my final project for my 3rd year, first semester. A blend of my passion for art and my course in tech. It's both a showcase of my works and a personal reminder that creativity can thrive anywhere, even with limited tools. Thanks for visiting, and I hope my art inspires you as much as I enjoyed making it!</p>
+        </main>
+
+        <div class="gallery-preview">
+            <div class="preview-column">
+                <img src="https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/dilaclear.png" alt="Portrait 1">
+            </div>
+            <div class="preview-column">
+               <img src="https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/minaclear.png" alt="Portrait 2"> 
+            </div>
+            <div class="preview-column">
+                <img src="https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/tzuyuclear.png" alt="Portrait 3">
+            </div>
+            <div class="preview-column">
+                <img src="https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/jisooclearhalf.png" alt="Portrait 4">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

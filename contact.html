@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Justin Oliver</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+       
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 100px;
+            background-color: #4a5f4a;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            padding: 25px 10px;
+            color: white;
+            font-size: 22px;
+            line-height: 1.1;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .nav a {
+            padding: 20px 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            flex: 1;
+            background-color: #8b9d7a;
+            padding: 50px 60px;
+            overflow-y: auto;
+            color: white;
+        }
+
+        .page-title {
+            font-size: 48px;
+            color: white;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            padding: 15px 25px;
+            background-color: rgba(47, 69, 56, 0.4);
+            border-left: 5px solid rgba(255, 255, 255, 0.7);
+            border-radius: 2px;
+            display: inline-block;
+        }
+
+        .contact-content {
+            max-width: 900px;
+            line-height: 1.8;
+        }
+
+        .contact-content p {
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .contact-content .intro {
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        .instagram-link {
+            color: #2f4538;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2px 8px;
+            border-radius: 3px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .instagram-link:hover {
+            background-color: white;
+        }
+
+        .section-heading {
+            font-size: 17px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .commission-list {
+            list-style: none;
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+
+        .commission-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .commission-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .instagram-screenshot {
+            width: 650px;
+            height: auto;
+            margin: 25px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+
+            .logo {
+                font-size: 18px;
+                padding: 15px;
+            }
+
+            .nav {
+                flex-direction: row;
+                overflow-x: auto;
+            }
+
+            .nav a {
+                font-size: 16px;
+                padding: 15px 25px;
+                white-space: nowrap;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            .page-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">JUSTIN<br>OLIVER</div>
+            <nav class="nav">
+                <a href="index.html">home</a>
+                <a href="gallery.html">gallery</a>
+                <a href="about.html">about</a>
+                <a href="services.html">services</a>
+                <a href="contact.html" class="active">contact</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <h1 class="page-title">CONTACT</h1>
+            
+            <div class="contact-content">
+                <p class="intro">Thank you so much for taking the time to explore my art portfolio! (^-^ )</p>
+                
+                <p>If you'd like to reach out, collaborate, or inquire about commissions, you can always message me on Instagram: <a href="https://www.instagram.com/on1ber" class="instagram-link">@on1ber</a></p>
+                
+                <img src="https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/profile.png" alt="Instagram Profile Screenshot" class="instagram-screenshot">
+                
+                <p>My DMs are open anytime, so don't hesitate to drop by and say hi (ﾉ◕ヮ◕)ﾉ･ﾟ✧</p>
+                
+                <p>I'm open to working on different kinds of digital art — portraits, character illustrations, concepts, or personalized pieces for gifts. If you have creative ideas you want to bring to life, I'd be happy to help you out (•‿•)</p>
+                
+                <p>You can also message me if you just want to talk about art, my process, or possible collabs with fellow creatives. I love connecting with people who share the same passion (〜^∇^)〜</p>
+                
+                <p class="section-heading">If you're planning to request a commission, it would be super helpful if you could include:</p>
+                
+                <ul class="commission-list">
+                    <li>Reference photos or art pegs (｡•̀ω•́｡)</li>
+                    <li>Preferred art style</li>
+                    <li>Purpose of the artwork</li>
+                    <li>Deadline or target date</li>
+                </ul>
+                
+                <p>This helps me understand your idea better and reply with an accurate quote. this is also stated in the services section(˘⌣˘ )</p>
+                
+                <p>I try my best to respond quickly, pero minsan baka may school work or projects lang ako ( ;︵; )</p>
+                
+                <p>But don't worry! I'll get back to you as soon as I can! (ง •̀_•́)ง</p>
+                
+                <p>If you're shy or unsure how to start your message, okay lang yun, just send a simple hi and we can take it from there (✿◠‿◠).</p>
+                
+                <p>I promise I'm friendly and approachable. Looking forward to chatting with you and hopefully creating something! ☆彡</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

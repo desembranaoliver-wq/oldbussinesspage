@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Justin Oliver</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+       
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 100px;
+            background-color: #4a5f4a;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            padding: 25px 10px;
+            color: white;
+            font-size: 22px;
+            line-height: 1.1;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .nav a {
+            padding: 20px 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            flex: 1;
+            background-color: #8b9d7a;
+            padding: 40px 50px;
+            overflow-y: auto;
+        }
+
+        .page-title {
+            font-size: 48px;
+            color: white;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            padding: 15px 25px;
+            background-color: rgba(47, 69, 56, 0.4);
+            border-left: 5px solid rgba(255, 255, 255, 0.7);
+            border-radius: 2px;
+            display: inline-block;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 35px;
+        }
+
+        .price-highlight {
+            background-color: #6b7d5e;
+            border-left: 4px solid #3d4f3d;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 6px;
+        }
+
+        .price-highlight h2 {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .price-main {
+            font-size: 36px;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .price-detail {
+            font-size: 16px;
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            padding-left: 15px;
+        }
+
+        .price-detail strong {
+            color: #ffd700;
+        }
+
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .section-card {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 22px;
+            border-radius: 6px;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-card h3 {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-card .emoji {
+            font-size: 22px;
+        }
+
+        .section-card ul {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .section-card li {
+            font-size: 15px;
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .section-card li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+        }
+
+        .addons-section {
+            background-color: #6b7d5e;
+            padding: 25px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+
+        .addons-section h3 {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .addon-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 18px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .addon-item .price {
+            font-size: 22px;
+            color: #ffd700;
+            margin-bottom: 8px;
+        }
+
+        .addon-item .description {
+            font-size: 14px;
+            color: white;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #3d4f3d 0%, #2f4538 100%);
+            padding: 25px;
+            border-radius: 6px;
+            text-align: center;
+            color: white;
+        }
+
+        .contact-section h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+
+        @media (max-width: 1200px) {
+            .sections-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+
+            .logo {
+                font-size: 18px;
+                padding: 15px;
+            }
+
+            .nav {
+                flex-direction: row;
+                overflow-x: auto;
+            }
+
+            .nav a {
+                font-size: 16px;
+                padding: 15px 25px;
+                white-space: nowrap;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            .page-title {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 15px;
+            }
+
+            .sections-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .addons-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">JUSTIN<br>OLIVER</div>
+            <nav class="nav">
+                <a href="index.html">home</a>
+                <a href="gallery.html">gallery</a>
+                <a href="about.html">about</a>
+                <a href="services.html" class="active">services</a>
+                <a href="contact.html">contact</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <h1 class="page-title">COMMISSIONS</h1>
+            <p class="subtitle">Portrait commissions made with love on my phone ♡</p>
+
+            
+            <div class="price-highlight">
+                <h2><span class="emoji">(₊˶•ᵕ•˶)</span> Rates & Payment</h2>
+                <div class="price-main">₱400 per head</div>
+                <div class="price-detail"><strong>₱100</strong> initial payment after I send the base sketch and after we discuss any changes you'd like.</div>
+                <div class="price-detail"><strong>₱300</strong> final payment before you receive the rendered piece via Google Drive.</div>
+            </div>
+
+            
+            <div class="sections-grid">
+                
+                <div class="section-card">
+                    <h3><span class="emoji">( ˶ˆ꒳ˆ˵ )</span> Reference & Scope</h3>
+                    <ul>
+                        <li>I'll be working based on the reference photo you'll provide.</li>
+                        <li>The piece will be a close-up portrait focusing on the upper torso (below the shoulders).</li>
+                    </ul>
+                </div>
+
+                
+                <div class="section-card">
+                    <h3><span class="emoji">(っ˘ω˘ς )</span> Art Style & Process</h3>
+                    <ul>
+                        <li>The style and quality will be consistent with my previous artworks posted on my account.</li>
+                        <li>Please expect the final result to match my usual art style — major changes should be discussed before finalizing.</li>
+                        <li>I'll be updating you throughout the process (from sketch → render → final output).</li>
+                    </ul>
+                </div>
+
+                
+                <div class="section-card">
+                    <h3><span class="emoji">(˶ˊᵕˋ˵)</span> Revisions</h3>
+                    <ul>
+                        <li>Minor changes are okay during the sketch phase.</li>
+                        <li>Once rendering starts, only small tweaks (like color or lighting adjustments) will be accepted.</li>
+                    </ul>
+                </div>
+
+                
+                <div class="section-card">
+                    <h3><span class="emoji">(・ω・`)</span> Cancellation Policy</h3>
+                    <ul>
+                        <li>If you decide to cancel, the refund will depend on how far the work has progressed.</li>
+                        <li>For cancellations during the early stage, I'll only keep the initial payment.</li>
+                    </ul>
+                </div>
+
+                
+                <div class="section-card">
+                    <h3><span class="emoji">(ง •̀ω•́)ง</span> Duration & Updates</h3>
+                    <ul>
+                        <li>Each commission usually takes about one week to complete.</li>
+                        <li>I'll keep you posted if there are any delays or issues on my part.</li>
+                    </ul>
+                </div>
+
+                
+                <div class="section-card">
+                    <h3><span class="emoji">( ˘•ω•˘ )</span> File Delivery</h3>
+                    <ul>
+                        <li>Final artwork will be sent as a high-resolution PNG/JPEG file via Google Drive.</li>
+                        <li>No physical copies will be provided.</li>
+                    </ul>
+                </div>
+
+                
+                <div class="section-card">
+                    <h3><span class="emoji">(´• ω •`)</span> Usage & Rights</h3>
+                    <ul>
+                        <li>The commissioned artwork is for personal use only (e.g., profile picture, wallpaper, etc.).</li>
+                        <li>Please message me if you'd like to use it for commercial or promotional purposes.</li>
+                    </ul>
+                </div>
+
+                
+                <div class="section-card">
+                    <h3><span class="emoji">(´｡• ᵕ •｡`)</span> Posting Policy</h3>
+                    <ul>
+                        <li>I may post the finished portrait on my page (with proper credit to you), but you can opt out if you prefer it to remain private.</li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            <div class="addons-section">
+                <h3><span class="emoji">(´꒳`)♡</span> Extra Add-ons</h3>
+                <div class="addons-grid">
+                    <div class="addon-item">
+                        <div class="price">+₱50</div>
+                        <div class="description">Simple background<br>(solid color, gradient, or pattern)</div>
+                    </div>
+                    <div class="addon-item">
+                        <div class="price">+₱50</div>
+                        <div class="description">Small props<br>(flowers, halo, sparkles, accessories)</div>
+                    </div>
+                    <div class="addon-item">
+                        <div class="price">+₱50</div>
+                        <div class="description">Color palette customization</div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </main>
+    </div>
+</body>
+</html>

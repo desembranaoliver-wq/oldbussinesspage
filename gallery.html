@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Justin Oliver</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 100px;
+            background-color: #4a5f4a;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            padding: 25px 10px;
+            color: white;
+            font-size: 22px;
+            line-height: 1.1;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .nav a {
+            padding: 20px 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .main-content {
+            flex: 1;
+            background-color: #8b9d7a;
+            overflow-y: auto;
+            padding: 40px 50px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: white;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            padding: 15px 25px;
+            background-color: rgba(47, 69, 56, 0.4);
+            border-left: 5px solid rgba(255, 255, 255, 0.7);
+            border-radius: 2px;
+            display: inline-block;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 35px;
+            margin-bottom: 60px;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            background-color: #a8b89a;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+
+            .nav {
+                flex-direction: row;
+                overflow-x: auto;
+            }
+
+            .nav a {
+                font-size: 16px;
+                padding: 15px 25px;
+                white-space: nowrap;
+            }
+
+            .main-content {
+                padding: 25px 20px;
+                height: auto;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 20px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">JUSTIN<br>OLIVER</div>
+            <nav class="nav">
+                <a href="index.html">home</a>
+                <a href="gallery.html" class="active">gallery</a>
+                <a href="about.html">about</a>
+                <a href="services.html">services</a>
+                <a href="contact.html">contact</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <section>
+                <h2 class="section-title">FEATURED WORKS</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/omma%20appa.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/janri.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/jisoo.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/ivy.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/tzuyu.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/marvs2.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/mina.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/kurt.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/dila.png>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section>
+                <h2 class="section-title">OTHER WORKS</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/dave.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/bituin.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/bennet.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/kim.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/vidal.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/kevs.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/kai3.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/marvs1.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/jah.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/nat.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/jai.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/longface.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/jurin.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/sullyoon.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/kgarcia.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/bjalx.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/bunnyear.png>
+                    </div>
+                    <div class="gallery-item">
+                        <img src=https://raw.githubusercontent.com/desembranaoliver-wq/art-portfolio/refs/heads/main/blushon.png>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
